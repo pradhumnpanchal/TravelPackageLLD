@@ -24,7 +24,7 @@ Here are the main classes of our Travel Package Management System:
 * **Address**: Represents the address of a passenger.
 * **PassengerType**: Enumerates the types of passengers (Standard, Gold, Premium) with associated discounts.
 
-![UML](https://github.com/pradhumnpanchal/TravelPackageLLD/blob/main/Main.png)
+![UML](https://github.com/pradhumnpanchal/TravelPackageLLD/blob/main/UML.png)
 
 ## Code
 Here is the code for classes, Enum including unit tests. For complete class implementation and unit tests for them refer the java files.
