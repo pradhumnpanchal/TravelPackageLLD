@@ -27,7 +27,7 @@ Here are the main classes of our Travel Package Management System:
 ![UML](https://github.com/pradhumnpanchal/TravelPackageLLD/blob/main/Main.png)
 
 ## Code
-Here is the code for classes, Enum including unit tests.
+Here is the code for classes, Enum including unit tests. For complete class implementation and unit tests for them refer the java files.
 
 - Here is the required Enum:
 ```
@@ -50,8 +50,6 @@ public enum PassengerType {
 
 - Here is the exception class:
 ```
-package exceptions;
-
 public class InvalidInputException extends RuntimeException {
 
     public InvalidInputException(String message) {
@@ -65,11 +63,6 @@ Here the different classes being implemented:
 
 **Activity**
 ```
-import exceptions.InvalidInputException;
-
-import java.util.ArrayList;
-import java.util.List;
-
 public class Activity {
     private String name;
     private String description;
@@ -95,30 +88,6 @@ public class Activity {
         this.passengers = new ArrayList<>();
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public double getCost() {
-        return cost;
-    }
-
-    public int getCapacity() {
-        return capacity;
-    }
-
-    public List<Passenger> getPassengers() {
-        return passengers;
-    }
-
-    public Destination getDestination() {
-        return destination;
-    }
-
     public void setDestination(Destination destination) {
         this.destination = destination;
     }
@@ -137,9 +106,6 @@ public class Activity {
 
 **Destination**
 ```
-import java.util.ArrayList;
-import java.util.List;
-
 public class Destination {
     private String name;
     private List<Activity> activities;
@@ -153,10 +119,6 @@ public class Destination {
         activities.add(activity);
     }
 
-    public String getName() {
-        return name;
-    }
-
     public List<Activity> getActivities() {
         return activities;
     }
@@ -165,11 +127,6 @@ public class Destination {
 
 **Passenger**
 ```
-import exceptions.InvalidInputException;
-
-import java.util.ArrayList;
-import java.util.List;
-
 public class Passenger {
     private String name;
     private int passengerNumber;
@@ -192,30 +149,6 @@ public class Passenger {
         this.passengerType = passengerType;
         this.activities = new ArrayList<>();
         this.address = new Address();
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public int getPassengerNumber() {
-        return passengerNumber;
-    }
-
-    public PassengerType getPassengerType() {
-        return passengerType;
-    }
-
-    public double getBalance() {
-        return balance;
-    }
-
-    public List<Activity> getActivities() {
-        return activities;
-    }
-
-    public void setBalance(double balance) {
-        this.balance = balance;
     }
 
     public boolean signUpForActivity(Activity activity) {
@@ -241,9 +174,6 @@ public class Passenger {
 
 **TravelPackage**
 ```
-import java.util.ArrayList;
-import java.util.List;
-
 public class TravelPackage {
     private String name;
     private int passengerCapacity;
